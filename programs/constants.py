@@ -8,7 +8,7 @@ MODE = "DEVELOPMENT"
 ABORT_ALL_POSITONS = True
 
 # find cointegrated Pairs
-FIND_COINTEGRATED = True
+FIND_COINTEGRATED = False
 
 # manage existing trades
 MANAGE_EXITS = True
