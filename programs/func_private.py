@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from func_utils import format_number
 import time
+import json
 
 from pprint import pprint
 
@@ -113,6 +114,12 @@ def abort_all_open_positions(client):
 
             # Protect API
             time.sleep(0.25)
-        
+
+        # Override json with empty list
+        bot_agents = []
+        if len(bot_agents) > 0:
+            with open("bot_agents.json", "w") as f:
+                json.dump(bot_agents, f)
+            
         # retrun closed orders
         return close_orders
